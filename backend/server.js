@@ -10,7 +10,7 @@ const cors = require('cors')
 // import { MongoClient } from 'mongodb'
 dotenv.config()
 // Connection URL
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb+srv://kushagragupta9793:xG9IaCz9zOTNpHsC@cluster1.jat4f.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1';
 const client = new MongoClient(url);
 const app = express()
 
