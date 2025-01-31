@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Manager = () => {
-    const backend_uri ="https://localhost:3000/";
+    const backend_uri ="https://ud-5.onrender.com/";
     const ref = useRef()
     const passwordRef = useRef()
     const [form, setform] = useState({ site: "", username: "", password: "" })
