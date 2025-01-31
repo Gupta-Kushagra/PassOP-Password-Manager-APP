@@ -54,8 +54,7 @@ const Manager = () => {
     const savePassword = async () => {
         if (form.site.length > 3 && form.username.length > 3 && form.password.length > 3) {
 
-            // If any such id exists in the db, delete it 
-            await fetch(backend_uri, { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: form.id }) })
+          
 
             setPasswordArray([...passwordArray, { ...form, id: uuidv4() }])
             await fetch(backend_uri, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...form, id: uuidv4() }) })
@@ -103,6 +102,8 @@ const Manager = () => {
     const editPassword = (id) => {
         setform({ ...passwordArray.filter(i => i.id === id)[0], id: id })
         setPasswordArray(passwordArray.filter(item => item.id !== id))
+          // If any such id exists in the db, delete it 
+            await fetch(backend_uri, { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: form.id }) })
     }
 
 
