@@ -99,7 +99,7 @@ const Manager = () => {
 
     }
 
-    const editPassword = (id) => {
+    const editPassword = async(id) => {
         setform({ ...passwordArray.filter(i => i.id === id)[0], id: id })
         setPasswordArray(passwordArray.filter(item => item.id !== id))
           // If any such id exists in the db, delete it 
